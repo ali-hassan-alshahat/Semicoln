@@ -46,7 +46,7 @@
   /* =========================================
    YELLOW
    ========================================= */
-  --color-yellow: #fccd65;
+  --color-yellow: #FBBE37;
   --color-yellow-50: #fff9eb;
   --color-yellow-100: #fff1d0;
   --color-yellow-200: #ffe6a6;
@@ -234,6 +234,31 @@
 
   --sidebar-border: rgba(255, 255, 255, 0.1);
   --sidebar-ring: #6f8dff;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1280px;
+  padding: 1.5rem 1rem;
+}
+@media (min-width: 640px) {
+  .center {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .center {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media (max-width: 640px) {
+  .rounded-4xl {
+    border-radius: 1.5rem;
+  }
 }
 
 @layer base {

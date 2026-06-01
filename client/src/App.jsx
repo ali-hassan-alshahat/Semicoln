@@ -1,10 +1,9 @@
-import { Button } from "./components/ui/button";
+import { LoginPage } from "./pages/auth/LoginPage";
 
 function App() {
   return (
     <>
-      <div className="bg-error">Hello world</div>
-      <Button variant="success"> Mark As Done </Button>
+      <LoginPage />
     </>
   );
 }
