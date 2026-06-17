@@ -1,5 +1,4 @@
 import { BrowserRouter } from "react-router-dom";
-import Sidebar from "./Features/Sidebar";
 import Routing from "./shared/Routing";
 
 function App() {
@@ -7,7 +6,6 @@ function App() {
     <>
       <BrowserRouter>
         <Routing />
-        <Sidebar />
       </BrowserRouter>
     </>
   );

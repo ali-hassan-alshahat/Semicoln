@@ -1,3 +1,4 @@
+import AppLayout from "@/components/ui/Layout/AppLayout";
 import LoginPage from "@/pages/auth/LoginPage";
 import RegisterPage from "@/pages/auth/RegisterPage";
 import { Suspense } from "react";
@@ -12,6 +13,7 @@ const Routing = () => {
       }
     >
       <Routes>
+        <Route path="/" element={<AppLayout />}></Route>
         <Route path="auth">
           <Route path="login" element={<LoginPage />} />
           <Route path="register" element={<RegisterPage />} />
