@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Sidebar from "@/Features/Sidebar";
+import RightPanel from "./RightPanel";
 const AppLayout = () => {
   return (
     <div className="flex h-screen overflow-hidden bg-[#EEF1F8] dark:bg-gray-700">
@@ -11,6 +12,7 @@ const AppLayout = () => {
           <Outlet />
         </div>
       </main>
+      <RightPanel />
     </div>
   );
 };
