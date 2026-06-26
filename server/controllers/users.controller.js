@@ -6,9 +6,6 @@ const { successResponse, errorResponse } = require("../utils/responseHandler");
 exports.login = async (req, res) => {
   try {
     const { email, password } = req.body;
-    if (!email || !password) {
-      return errorResponse(res, "Email and password are required", 400);
-    }
     const user = await User.findOne({ email });
     if (!user) {
       return errorResponse(res, "User not found", 400);
@@ -42,9 +39,6 @@ exports.login = async (req, res) => {
 exports.register = async (req, res) => {
   try {
     const { name, email, password } = req.body;
-    if (!name || !email || !password) {
-      return errorResponse(res, "Name, Email and Password are required", 400);
-    }
     const existingUser = await User.findOne({ email });
     if (existingUser) {
       return errorResponse(res, "User is already exists", 400);

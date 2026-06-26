@@ -2,8 +2,14 @@ const express = require("express");
 const router = express.Router();
 const { protect } = require("../middlewares/auth.middleware");
 const userController = require("../controllers/users.controller");
+const { validateRequest } = require("../middlewares/validate.middleware");
+const { loginSchema, registerSchema } = require("../schemas/auth.schema");
 
-router.post("/register", userController.register);
-router.post("/login", userController.login);
+router.post(
+  "/register",
+  validateRequest(registerSchema),
+  userController.register,
+);
+router.post("/login", validateRequest(loginSchema), userController.login);
 
-module.exports = router
+module.exports = router;
