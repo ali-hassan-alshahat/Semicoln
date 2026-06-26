@@ -15,9 +15,11 @@ exports.errorResponse = (
   res,
   message = "Something went wrong",
   statusCode = 500,
+  errors = null,
 ) => {
   return res.status(statusCode).json({
-    status: "error",
+    success: false,
     message,
+    ...(errors && { errors }),
   });
 };
