@@ -44,18 +44,14 @@ export const LoginPage = () => {
 
   return (
     <div className="h-screen w-screen flex overflow-hidden bg-white">
-      {/* LEFT SIDE */}
       <div className="flex-1 flex flex-col justify-center px-16 mx-10">
         <p className="text-3xl font-bold text-black mb-8">Welcome Back!</p>
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col">
-          {/* EMAIL */}
-
           <label className="text-sm text-gray-700 mb-2">Email</label>
           <input
             type="email"
             placeholder="Enter your email"
             className={`w-72 border rounded-lg px-4 py-3 text-sm outline-none transition
-
             ${
               errors.email || backendErrors.email
                 ? "border-red-500"
@@ -63,36 +59,26 @@ export const LoginPage = () => {
             }`}
             {...register("email")}
           />
-
           {(errors.email || backendErrors.email) && (
             <p className="text-xs text-red-500 mt-1 mb-4">
               {errors.email?.message ?? backendErrors.email}
             </p>
           )}
-
-          {/* PASSWORD */}
-
           <label className="text-sm text-gray-700 mb-2 mt-4">
             Enter Your Password
           </label>
-
           <PasswordInput
             register={register}
             error={errors.password?.message ?? backendErrors.password}
           />
-
           <p className="text-xs text-gray-400 mt-1 mb-6 w-72">
             Up to 8 characters with an Uppercase, symbol and number
           </p>
-
-          {/* GENERAL ERROR */}
-
           {error && !backendErrors.email && !backendErrors.password && (
             <div className="mb-4 w-72 rounded-lg bg-red-50 border border-red-200 p-3 text-sm text-red-600">
               {error}
             </div>
           )}
-          {/* LOGIN */}
           <AuthButton loading={loading}>Log In</AuthButton>
           <button
             type="button"
@@ -109,11 +95,11 @@ export const LoginPage = () => {
           className="w-full h-full object-cover object-left"
         />
         <div className="absolute top-6 right-6">
-          <Button variant="secondary" className="text-primary cursor-pointer">
             <Link to={"/auth/register"}>
+          <Button variant="secondary" className="text-primary cursor-pointer">
             Create Account
-            </Link>
           </Button>
+            </Link>
         </div>
       </div>
     </div>
