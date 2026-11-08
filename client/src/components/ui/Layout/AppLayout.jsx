@@ -8,7 +8,7 @@ const AppLayout = () => {
       <Sidebar />
       <main className="flex-1 flex flex-col pt-5">
         <Header />
-        <div className="flex-1 overflow-y-auto bg-[#EEF1F8] dark:bg-gray-800">
+        <div className="flex-1 overflow-y-auto bg-[#EEF1F8] dark:bg-gray-800 px-14 pt-12">
           <Outlet />
         </div>
       </main>

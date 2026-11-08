@@ -4,7 +4,7 @@ import { Bell } from "lucide-react";
 const Header = () => {
   return (
     <>
-      <div className="px-4 flex items-center justify-between">
+      <div className="px-14 flex items-center justify-between">
         <Searchbar />
         <div className="relative">
           <Bell className="text-primary" />
